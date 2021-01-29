@@ -1,9 +1,14 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Weekend-Code-Challenge
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+- For this weekend challenge I created an application that records employee salaries and adds salaries up to report monthly costs.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+## Built With
+
+This application was created using:
+
+- HTML-5
+- CSS
+- Javascript
+- jQuery.
