@@ -3,6 +3,7 @@
 <!-- all this above is related to HTML / storing info in an object. -->
 
 -[x] Create a 'Submit' button should collect the form information
+-[] save employees to an array.
 
 - [] store the information to calculate monthly costs,
 - [] append information to the DOM and clear the input fields.
