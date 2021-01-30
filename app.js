@@ -33,9 +33,9 @@ function submitBtn(event) {
   const employees = {
     firstName: fName,
     lastName: lName,
-    ID: Number(ID),
+    ID: Number(ID), // want this to be a number
     Title: title,
-    Salary: Number(Salary),
+    Salary: Number(Salary), // want this to be a number
   };
   //
   // this is going to push the employees object into the global array.
@@ -49,6 +49,18 @@ function submitBtn(event) {
   $('#TitlePos').val('');
   $('#annSal').val('');
   //
-  // append employee to DOM.
-  $('#');
+  //
+  $('#tableData').empty();
+  for (let items of employeeInfo) {
+    $('#tableData').append(
+      ` <tr>
+      <td>employees.firstName</td>
+      <td>employees.lastName</td>
+      <td>employees.ID</td>
+      <td>employees.Title</td>
+      <td>employees.Salary</td>
+    </tr>; `
+    console.log(items);
+    );
+  }
 }
