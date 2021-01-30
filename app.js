@@ -9,6 +9,46 @@ function onReady() {
   $(document).on('click', '#addEmployeeBtn', submitBtn);
 }
 
-function submitBtn() {
+/*
+ * this function needs to activate on click event
+ * needs to collect data from DOM. - .val()
+ * create an object to Separate information
+ * needs to push employees object to an array
+ */
+const employeeInfo = []; // Global array
+//
+function submitBtn(event) {
+  // this is used to help the page not reload once I hit submit.
+  event.preventDefault();
   console.log("I'm Clicked");
+  //
+  // grabbing info from the DOM // these variables will be used in object.
+  let fName = $('#fName').val();
+  let lName = $('#lName').val();
+  let ID = $('#ID').val();
+  let title = $('#TitlePos').val();
+  let Salary = $('#annSal').val();
+  //
+  // putting variables into an object.
+  const employees = {
+    firstName: fName,
+    lastName: lName,
+    ID: Number(ID),
+    Title: title,
+    Salary: Number(Salary),
+  };
+  //
+  // this is going to push the employees object into the global array.
+  employeeInfo.push(employees);
+  console.log(employeeInfo);
+  //
+  // empty textboxes
+  $('#fName').val('');
+  $('#lName').val('');
+  $('#ID').val('');
+  $('#TitlePos').val('');
+  $('#annSal').val('');
+  //
+  // append employee to DOM.
+  $('#');
 }
