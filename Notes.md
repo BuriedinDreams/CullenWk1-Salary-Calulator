@@ -1,8 +1,8 @@
--[] create a HTML form that collects _employee first name, last name, ID number, job title, annual salary_.
+-[x] create a HTML form that collects _employee first name, last name, ID number, job title, annual salary_.
 
 <!-- all this above is related to HTML / storing info in an object. -->
 
--[] Create a 'Submit' button should collect the form information
+-[x] Create a 'Submit' button should collect the form information
 
 - [] store the information to calculate monthly costs,
 - [] append information to the DOM and clear the input fields.
