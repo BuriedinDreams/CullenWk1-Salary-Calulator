@@ -7,6 +7,8 @@ function onReady() {
 
   // submit button click with save info to an array.
   $(document).on('click', '#addEmployeeBtn', submitBtn);
+
+  $(document).on('click', '#addEmployeeBtn', calcMonthly);
 }
 
 /*
@@ -16,6 +18,8 @@ function onReady() {
  * needs to push employees object to an array
  */
 const employeeInfo = []; // Global array
+
+const monthlyArray = []; // global monthlyArray
 //
 function submitBtn(event) {
   // this is used to help the page not reload once I hit submit.
@@ -42,6 +46,21 @@ function submitBtn(event) {
   employeeInfo.push(employees);
   console.log(employeeInfo);
   //
+  // I want to take info from the global array and take all the employees wages --
+  // and divide them by 12.
+  // this needs to be above the .val('') or else I'm unable to collect the data.
+  let monthlyWage = 0;
+
+  for (items of employeeInfo) {
+    monthlyWage = $('#annSal').val() / 12;
+
+    console.log(monthlyWage);
+
+    console.log(items);
+  }
+  monthlyArray.push(monthlyWage);
+  console.log(monthlyArray);
+
   // empty textboxes
   $('#fName').val('');
   $('#lName').val('');
@@ -52,15 +71,27 @@ function submitBtn(event) {
   //
   $('#tableData').empty();
   for (let items of employeeInfo) {
+    // remember to append items.firstName etc.
+    console.log(items);
     $('#tableData').append(
       ` <tr>
-      <td>employees.firstName</td>
-      <td>employees.lastName</td>
-      <td>employees.ID</td>
-      <td>employees.Title</td>
-      <td>employees.Salary</td>
+      <td>${items.firstName}</td>
+      <td>${items.lastName}</td>
+      <td>${items.ID}</td>
+      <td>${items.Title}</td>
+      <td>${items.Salary}</td>
     </tr>; `
-    console.log(items);
     );
   }
+}
+//
+// global monthlyArray
+// const monthlyArray = [];
+
+function calcMonthly() {
+  // I want to take info from the global array and take all the employees wages --
+  // and divide them by 12.
+  // monthlyArray.push(monthlyWage);
+  // console.log(monthlyWage);
+  // console.log($('#annSal'));
 }

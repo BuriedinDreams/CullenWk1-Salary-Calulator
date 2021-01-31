@@ -5,7 +5,7 @@
 -[x] Create a 'Submit' button should collect the form information -[x] save employees to an array.
 
 - [x] store the information to calculate monthly costs,
-- [] append information to the DOM and clear the input fields.
+- [x] append information to the DOM and clear the input fields.
 - [] Using the stored information, calculate monthly costs and append this to the to DOM.
 -[] If the total monthly cost exceeds $20,000, add a red background color to the total monthly cost.
 <!-- All this above is involved with button -->
