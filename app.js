@@ -50,16 +50,16 @@ function submitBtn(event) {
   // and divide them by 12.
   // this needs to be above the .val('') or else I'm unable to collect the data.
   //
-  const monthlyArray = []; //
-  let monthlyWage = 0;
+  const monthlyArray = []; // this is not global because we want the information to not Duplicate.
+  //
+  let monthlyWage = 0; // this is setting the value to 0
 
   for (items of employeeInfo) {
-    monthlyWage = 0;
     monthlyWage = items.Salary / 12;
     monthlyArray.push(monthlyWage);
-    console.log('employeeInfo', employeeInfo);
+    // console.log('employeeInfo', employeeInfo);
     console.log('items', items);
-    console.log('monthlyArray', monthlyArray);
+
     // console.log('This is MonthlyWage CL:', monthlyWage);
     // console.log('This is MonthlyArray CL:', monthlyArray);
     // console.log('This is the for OF loop E.I.Array:', items);
