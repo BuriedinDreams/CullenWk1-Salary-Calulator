@@ -106,6 +106,8 @@ function submitBtn(event) {
 
 function deleteBtn() {
   // console.log("I'm clicked!");
-  // $(this).parent().remove();
-  console.log($(this).parent());
+  console.log($(this).parent().parent());
+  $(this).parent().parent().remove();
+
+  // let removeitem =
 }

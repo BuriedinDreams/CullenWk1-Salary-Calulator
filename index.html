@@ -31,12 +31,12 @@
       <table>
         <thead>
           <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Annual Salary</th>
-            <th></th>
+            <th class="tHead">First Name</th>
+            <th class="tHead">Last Name</th>
+            <th class="tHead">ID</th>
+            <th class="tHead">Title</th>
+            <th class="tHead">Annual Salary</th>
+            <th class="tHead" id="blankSpace"></th>
           </tr>
         </thead>
         <tbody id="tableData">
@@ -73,13 +73,19 @@
         <!-- add some padding here. -->
         <tfoot>
           <tr>
-            <td id="TotalMonthlyCost">Total Monthly</td>
+            <!-- <td>Total Monthly</td>
+            <td id="TotalMonthlyCost"></td> -->
             <!-- <td id="TotalMonthlyCost"></td> -->
           </tr>
         </tfoot>
         <!-- end of table -->
       </table>
+      <div id="TotalMonthlydisplay">
+        <h3>Total Monthly</h3>
+        <ul id="TotalMonthlyCost"></ul>
     </form>
+    
+    </div>
     <!-- end of form -->
   </body>
 </html>
