@@ -8,6 +8,8 @@ function onReady() {
   // submit button click with save info to an array.
   $(document).on('click', '#addEmployeeBtn', submitBtn);
 
+  $(document).on('click', '#deleteBtn', deleteBtn);
+
   // $(document).on('click', '#addEmployeeBtn', calcMonthly);
 }
 
@@ -57,12 +59,22 @@ function submitBtn(event) {
   for (items of employeeInfo) {
     monthlyWage = items.Salary / 12;
     monthlyArray.push(monthlyWage);
-    // console.log('employeeInfo', employeeInfo);
     console.log('items', items);
+  }
 
-    // console.log('This is MonthlyWage CL:', monthlyWage);
-    // console.log('This is MonthlyArray CL:', monthlyArray);
-    // console.log('This is the for OF loop E.I.Array:', items);
+  let totalSum = 0;
+  for (let items in monthlyArray) {
+    // this should loop through the objects in the array.
+    totalSum += monthlyArray[items];
+    console.log('this is the totalSum', totalSum);
+  }
+  console.log('outside the loop', totalSum);
+
+  $('#TotalMonthlyCost').empty(); // this should empty the current info and replace with new totalSum.
+  $('#TotalMonthlyCost').append(`${totalSum}`);
+
+  if (totalSum > 20000) {
+    $('#TotalMonthlyCost').css('background-color', 'red');
   }
 
   console.log('showing the final result inside M.A.', monthlyArray);
@@ -86,18 +98,14 @@ function submitBtn(event) {
       <td>${items.ID}</td>
       <td>${items.Title}</td>
       <td>${items.Salary}</td>
+      <td> <input type="button" value="Delete" id="deleteBtn"/> </td>
     </tr>; `
     );
   }
 }
-//
-// global monthlyArray
-// const monthlyArray = [];
 
-function calcMonthly() {
-  // I want to take info from the global array and take all the employees wages --
-  // and divide them by 12.
-  // monthlyArray.push(monthlyWage);
-  // console.log(monthlyWage);
-  // console.log($('#annSal'));
+function deleteBtn() {
+  // console.log("I'm clicked!");
+  // $(this).parent().remove();
+  console.log($(this).parent());
 }
