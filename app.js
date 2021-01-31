@@ -8,7 +8,7 @@ function onReady() {
   // submit button click with save info to an array.
   $(document).on('click', '#addEmployeeBtn', submitBtn);
 
-  $(document).on('click', '#addEmployeeBtn', calcMonthly);
+  // $(document).on('click', '#addEmployeeBtn', calcMonthly);
 }
 
 /*
@@ -18,8 +18,8 @@ function onReady() {
  * needs to push employees object to an array
  */
 const employeeInfo = []; // Global array
+//
 
-const monthlyArray = []; // global monthlyArray
 //
 function submitBtn(event) {
   // this is used to help the page not reload once I hit submit.
@@ -49,17 +49,23 @@ function submitBtn(event) {
   // I want to take info from the global array and take all the employees wages --
   // and divide them by 12.
   // this needs to be above the .val('') or else I'm unable to collect the data.
+  //
+  const monthlyArray = []; //
   let monthlyWage = 0;
 
   for (items of employeeInfo) {
-    monthlyWage = $('#annSal').val() / 12;
-
-    console.log(monthlyWage);
-
-    console.log(items);
+    monthlyWage = 0;
+    monthlyWage = items.Salary / 12;
+    monthlyArray.push(monthlyWage);
+    console.log('employeeInfo', employeeInfo);
+    console.log('items', items);
+    console.log('monthlyArray', monthlyArray);
+    // console.log('This is MonthlyWage CL:', monthlyWage);
+    // console.log('This is MonthlyArray CL:', monthlyArray);
+    // console.log('This is the for OF loop E.I.Array:', items);
   }
-  monthlyArray.push(monthlyWage);
-  console.log(monthlyArray);
+
+  console.log('showing the final result inside M.A.', monthlyArray);
 
   // empty textboxes
   $('#fName').val('');
