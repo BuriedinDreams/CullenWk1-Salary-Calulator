@@ -50,4 +50,10 @@ tr:nth-child(odd) {
 }
 #TotalMonthlydisplay {
   text-align: center;
+  margin-right: 170px;
 }
+
+/* #bottomBar {
+  padding: 10px;
+  background-color: darkgray;
+} */

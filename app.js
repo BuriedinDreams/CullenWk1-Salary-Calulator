@@ -71,7 +71,7 @@ function submitBtn(event) {
   console.log('outside the loop', totalSum);
 
   $('#TotalMonthlyCost').empty(); // this should empty the current info and replace with new totalSum.
-  $('#TotalMonthlyCost').append(`${totalSum}`);
+  $('#TotalMonthlyCost').append(` $${totalSum}`);
 
   if (totalSum > 20000) {
     $('#TotalMonthlyCost').css('background-color', 'red');
