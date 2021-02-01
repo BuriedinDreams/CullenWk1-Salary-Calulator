@@ -108,6 +108,4 @@ function deleteBtn() {
   // console.log("I'm clicked!");
   console.log($(this).parent().parent());
   $(this).parent().parent().remove();
-
-  // let removeitem =
 }
